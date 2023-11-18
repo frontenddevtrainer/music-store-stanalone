@@ -1,6 +1,6 @@
-@if (false) {
-    <div>Content</div>
+@for(user of users; track user) {
+    {{user}}
 }
-@else {
-  <div>Else content</div>
+@empty {
+  empty list
 }
