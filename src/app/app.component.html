@@ -1,5 +1,5 @@
-@for(user of users; track user) {
-    {{user}}
+@for(user of (users | async); track user) {
+    {{user.username}}
 }
 @empty {
   empty list
