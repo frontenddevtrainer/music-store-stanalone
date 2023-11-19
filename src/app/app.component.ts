@@ -23,6 +23,8 @@ export class AppComponent {
   title = 'music-store-stanalone';
   users!: Observable<any[]>;
 
+  time = "2023-11-18T17:19:19.329Z"
+
   ngOnInit(){
     this.users = this._http.get<any[]>("https://jsonplaceholder.typicode.com/users")
   }

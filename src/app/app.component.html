@@ -1,6 +1,8 @@
-@for(user of (users | async); track user) {
-    {{user.username}}
-}
-@empty {
-  empty list
-}
+<table>
+  @for(user of (users | async); track user) {
+    <tr><td>{{user.username}}</td></tr>
+  }
+  @empty {
+    <tr><td>Empty</td></tr>
+  }
+</table>
