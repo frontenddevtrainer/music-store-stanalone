@@ -1,8 +1,5 @@
-<table>
-  @for(user of (users | async); track user) {
-    <tr><td>{{user.username}}</td></tr>
-  }
-  @empty {
-    <tr><td>Empty</td></tr>
-  }
-</table>
+<form #loginForm="ngForm" [appConfirmEqualValidator]="['password', 'confirmPassword']">
+  <input name="password" #password="ngModel" ngModel="password"/>
+  <input name="confirmPassword" #confirmPassword="ngModel" ngModel="confirmPassword"/>
+</form>
+{{loginForm.errors| json}}
